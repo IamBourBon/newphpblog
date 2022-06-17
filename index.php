@@ -18,7 +18,7 @@
     
 </head>
 
-<body>
+<body onload="menuActive()">
     <div id="wrapper">
         <?php  
             include "header.php";
@@ -114,5 +114,9 @@
 
 
 </body>
-
+<script>
+    function menuActive(){
+        document.getElementById('home').classList.add("active-menu");
+    }  
+</script>
 </html>

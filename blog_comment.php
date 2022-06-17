@@ -17,7 +17,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
 
-<body >
+<body onload="menuActive()">
     <div id="wrapper">
         <?php
         include "header.php";
@@ -161,6 +161,10 @@
 
 
 </body>
-
+<script>
+    function menuActive() {
+        document.getElementById('comment').classList.add("active-menu");
+    }
+</script>
 
 </html>

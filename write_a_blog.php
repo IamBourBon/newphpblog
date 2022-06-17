@@ -19,7 +19,7 @@
     <link href="summernote/summernote.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="menuActive()">
     <div id="wrapper">
         <?php
         include "header.php";
@@ -216,4 +216,9 @@
         } , false)
     </script>
 </body>
+<script>
+    function menuActive(){
+        document.getElementById('write').classList.add("active-menu");
+    }  
+</script>
 </html>
