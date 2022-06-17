@@ -104,8 +104,8 @@
                 $new_blogs->n_blog_post_views = $_POST['post_view'];
                 $new_blogs->n_home_page_place = $_POST['opt_place'];
                 $new_blogs->f_post_status = $_POST['status'];
-                $new_blogs->d_date_created = date("Y-m-d",$_POST['date_created']);
-                $new_blogs->d_time_created = date("h:i:s",$_POST['time_created']);
+                $new_blogs->d_date_created = date("Y-m-d",intval($_POST['date_created']));
+                $new_blogs->d_time_created = date("h:i:s",intval($_POST['time_created']));
                 // $new_blog->d_date_updated = date("Y-m-d",time());
                 // $new_blog->d_time_updated = date("h:i:s",time());
 
@@ -151,7 +151,6 @@
                 }    
                 $opt = empty($_POST['opt_place']) ? 0 : $_POST['opt_place'];
 
-
                 $new_blogs->n_category_id = $_POST['select_category'];
                 $new_blogs->v_post_title = $_POST['title'];
                 $new_blogs->v_post_meta_title = $_POST['meta_title'];
@@ -163,8 +162,8 @@
                 $new_blogs->n_blog_post_views = 0;
                 $new_blogs->n_home_page_place = $opt;
                 $new_blogs->f_post_status = 1;
-                $new_blogs->d_date_created = "0000-00-00";
-                $new_blogs->d_time_created = "0000-00-00";
+                $new_blogs->d_date_created = date("Y-m-d",time());
+                $new_blogs->d_time_created = date("h:i:s",time());
 
 
 

@@ -41,7 +41,7 @@
                 $category->v_category_title = $_POST['title'];
                 $category->v_category_meta_title = $_POST['meta_title'];
                 $category->v_category_path = $_POST['path'];
-                $category->d_date_created = date("Y/m/d",time());
+                $category->d_date_created = date("Y-m-d",time());
                 $category->d_time_created = date("h:i:s",time());
 
                 if($category->Add()){
@@ -53,7 +53,7 @@
                 $category->v_category_title = $_POST['title'];
                 $category->v_category_meta_title = $_POST['meta_title'];
                 $category->v_category_path = $_POST['path'];
-                $category->d_date_created = date("Y/m/d",time());
+                $category->d_date_created = date("Y-m-d",time());
                 $category->d_time_created = date("h:i:s",time());
 
                 

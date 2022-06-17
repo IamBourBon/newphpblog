@@ -64,6 +64,7 @@ class blogs{
 
     public function Add(){
         $sql = "insert into $this->table set 
+        n_category_id = :c_id,
         v_post_title = :title, 
         v_post_meta_title = :meta, 
         v_post_path = :path,
@@ -85,6 +86,7 @@ class blogs{
 		$this->v_post_content = htmlspecialchars(strip_tags($this->v_post_content));
 		$this->v_post_path = htmlspecialchars(strip_tags($this->v_post_path));
 
+        $stmt->bindParam(':c_id',$this->n_category_id);
         $stmt->bindParam(':title',$this->v_post_title);
         $stmt->bindParam(':meta',$this->v_post_meta_title);
         $stmt->bindParam(':path',$this->v_post_path);

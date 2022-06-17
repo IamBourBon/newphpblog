@@ -171,15 +171,15 @@
                                         <div class="form-group">
                                             <label>Home Page Placement</label>
                                             <label class="radio-inline">
-                                                <input type="radio" name="opt_place" id="optionsRadiosInline1" value="option1" checked=""
+                                                <input type="radio" name="opt_place" id="optionsRadiosInline1" value="1" checked=""
                                                 <?php echo $new_blog->n_home_page_place==1?"checked":"" ?>>1
                                             </label>
                                             <label class="radio-inline">
-                                                <input type="radio" name="opt_place" id="optionsRadiosInline2" value="option2"
+                                                <input type="radio" name="opt_place" id="optionsRadiosInline2" value="2"
                                                 <?php echo $new_blog->n_home_page_place==2?"checked":"" ?>>2
                                             </label>
                                             <label class="radio-inline">
-                                                <input type="radio" name="opt_place" id="optionsRadiosInline3" value="option3"
+                                                <input type="radio" name="opt_place" id="optionsRadiosInline3" value="3"
                                                 <?php echo $new_blog->n_home_page_place==3?"checked":"" ?>>3
                                             </label>
                                         </div>
