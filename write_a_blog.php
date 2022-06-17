@@ -19,15 +19,15 @@
     <link href="summernote/summernote.min.css" rel="stylesheet">
 </head>
 
-<body onload="menuActive()">
+<body>
     <div id="wrapper">
         <?php
         include "header.php";
         // NAV TOP  
         include "sidebar.php";
         //NAV SIDE 
-        include('.\includes\database.php');
-        include('.\includes\edit_categories.php');
+        include "./includes/database.php";
+        include "./includes/edit_categories.php";
 
         $database = new database();
         $db = $database->connect();
@@ -170,7 +170,7 @@
                 <!-- /.panel -->
             </div>
 
-            <?php include('footer.php') ?>
+            <?php include "footer.php" ?>
         </div>
         <!-- /. PAGE INNER  -->
     </div>
@@ -216,9 +216,4 @@
         } , false)
     </script>
 </body>
-<script>
-    function menuActive(){
-        document.getElementById('write').classList.add("active-menu");
-    }  
-</script>
 </html>

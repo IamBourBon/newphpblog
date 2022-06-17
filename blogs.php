@@ -28,9 +28,9 @@
         ?>
         <!-- /. NAV SIDE  -->
         <?php
-        include('.\includes\database.php');
-        include('.\includes\edit_blogs.php');
-        include "includes/tags.php";
+        include "./includes/database.php";
+        include "./includes/edit_blogs.php";
+        include "./includes/tags.php";
 
         $database = new database();
         $db = $database->connect();
@@ -46,10 +46,10 @@
                 $new_tags->delete();
 
                 if ($_POST['Main_img'] != "") {
-                    unlink("./images/upload/" . $_POST['Main_img']);
+                    unlink("../images/upload/" . $_POST['Main_img']);
                 }
                 if ($_POST['Alt_img'] != "") {
-                    unlink("./images/upload" . $_POST['Alt_img']);
+                    unlink("../images/upload" . $_POST['Alt_img']);
                 }
 
                 $new_blogs->n_blog_post_id = $_POST['blog_id'];
@@ -59,7 +59,7 @@
                 };
             } else if (isset($_POST['Update_Blog'])) {
 
-                $target_file = "./images/upload/";
+                $target_file = "../images/upload/";
                 $access_extension = array('jpg', 'png');
                 $main_image = "" ;
                 $alt_image = "" ; 

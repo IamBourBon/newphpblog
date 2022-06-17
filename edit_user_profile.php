@@ -26,8 +26,8 @@
         // NAV TOP  
         include "sidebar.php";
         //NAV SIDE 
-        include('.\includes\database.php');
-        include('.\includes\edit_user.php');
+        include "./includes/database.php";
+        include "./includes/edit_user.php";
 
         $database = new database();
         $db = $database->connect();
@@ -200,7 +200,7 @@
                 <!-- /.panel -->
             </div>
 
-            <?php include('footer.php') ?>
+            <?php include "footer.php" ?>
         </div>
         <!-- /. PAGE INNER  -->
     </div>

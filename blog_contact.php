@@ -17,7 +17,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
 
-<body onload="menuActive()">
+<body>
     <div id="wrapper">
         <?php
         include "header.php";
@@ -28,8 +28,8 @@
         ?>
         <!-- /. NAV SIDE  -->
         <?php
-        include('.\includes\database.php');
-        include "includes/edit_blog_contact.php";
+        include "./includes/database.php";
+        include "./includes/edit_blog_contact.php";
 
         $database = new database();
         $db = $database->connect();
@@ -156,7 +156,7 @@
                 <!-- /.panel -->
             </div>
 
-            <?php include('footer.php') ?>
+            <?php include "footer.php" ?>
         </div>
         <!-- /. PAGE INNER  -->
     </div>
@@ -178,9 +178,4 @@
 
 
 </body>
-<script>
-    function menuActive(){
-        document.getElementById('contact').classList.add("active-menu");
-    }  
-</script>
 </html>

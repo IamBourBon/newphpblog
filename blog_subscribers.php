@@ -28,8 +28,8 @@
         ?>
         <!-- /. NAV SIDE  -->
         <?php
-        include('.\includes\database.php');
-        include "includes/edit_blog_subs.php";
+        include "./includes/database.php";
+        include "./includes/edit_blog_subs.php";
 
         $database = new database();
         $db = $database->connect();
