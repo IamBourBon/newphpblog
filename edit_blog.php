@@ -115,7 +115,7 @@
                                             if ($new_blog->v_main_image_url != "") {
                                             ?>
                                                 <br>
-                                                <img src="../images/upload<?php echo $new_blog->v_main_image_url ?>" width="480px">
+                                                <img src="./images/upload<?php echo $new_blog->v_main_image_url ?>" width="480px">
                                             <?php
                                             }
                                             ?>
@@ -129,7 +129,7 @@
                                             if ($new_blog->v_main_image_url != "") {
                                             ?>
                                                 <br>
-                                                <img src="../images/upload<?php echo $new_blog->v_main_image_url ?>" width="480px">
+                                                <img src="./images/upload<?php echo $new_blog->v_main_image_url ?>" width="480px">
                                             <?php
                                             }
                                             ?>

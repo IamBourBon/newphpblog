@@ -47,7 +47,7 @@
                     $extension = $file['extension'];
                     $access_extension = array('jpg', 'png');
                     if (in_array($extension, $access_extension)) {
-                        $target_file = "../images/avatars/";
+                        $target_file = "./images/avatars/";
                         $image_name = $file_upload['name'];
                         move_uploaded_file($file_upload['tmp_name'], $target_file . $image_name);
                     } 
@@ -172,14 +172,14 @@
                                                 if (empty($_POST['old_image_profile'])) {
                                             ?>
 
-                                                    <img class="img-thumbnail" src="../images/avatars/user-01.jpg" alt="Loocj" width=180px>
+                                                    <img class="img-thumbnail" src="./images/avatars/user-01.jpg" alt="Loocj" width=180px>
 
                                                 <?php
                                                 }
                                             } else {
                                                 ?>
 
-                                                <img class="img-thumbnail" src="<?php echo "../images/avatars/" . $row['v_image'] ?>" alt="Loocj" width=180px>
+                                                <img class="img-thumbnail" src="<?php echo "./images/avatars/" . $row['v_image'] ?>" alt="Loocj" width=180px>
 
                                             <?php
                                             }

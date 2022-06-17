@@ -46,10 +46,10 @@
                 $new_tags->delete();
 
                 if ($_POST['Main_img'] != "") {
-                    unlink("../images/upload/" . $_POST['Main_img']);
+                    unlink("./images/upload/" . $_POST['Main_img']);
                 }
                 if ($_POST['Alt_img'] != "") {
-                    unlink("../images/upload" . $_POST['Alt_img']);
+                    unlink("./images/upload" . $_POST['Alt_img']);
                 }
 
                 $new_blogs->n_blog_post_id = $_POST['blog_id'];
@@ -59,7 +59,7 @@
                 };
             } else if (isset($_POST['Update_Blog'])) {
 
-                $target_file = "../images/upload/";
+                $target_file = "./images/upload/";
                 $access_extension = array('jpg', 'png');
                 $main_image = "" ;
                 $alt_image = "" ; 
@@ -116,7 +116,7 @@
 
             } else if (isset($_POST['Write_Blog'])) {
 
-                $target_file = "../images/upload/";
+                $target_file = "./images/upload/";
                 $access_extension = array('jpg', 'png');
                 $main_image = "" ;
                 $alt_image = "" ; 
