@@ -150,7 +150,7 @@
                 <!-- /.panel -->
             </div>
 
-            <?php include('footer.php') ?>
+            <?php include "footer.php" ?>
         </div>
         <!-- /. PAGE INNER  -->
     </div>

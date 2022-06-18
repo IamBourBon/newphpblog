@@ -49,7 +49,7 @@
                     unlink("./images/upload/" . $_POST['Main_img']);
                 }
                 if ($_POST['Alt_img'] != "") {
-                    unlink("./images/upload" . $_POST['Alt_img']);
+                    unlink("./images/upload/" . $_POST['Alt_img']);
                 }
 
                 $new_blogs->n_blog_post_id = $_POST['blog_id'];
@@ -73,9 +73,9 @@
                         $main_image = $file_upload_main_img['name'];
                         move_uploaded_file($file_upload_main_img['tmp_name'], $target_file . $main_image);
                     
-                    } else {
-                        $main_image = $_POST['old_main_image'];
-                    }
+                    } 
+                }else {
+                    $main_image = $_POST['old_main_image'];
                 }
     
                 $file_upload_alt_img = $_FILES['alt_image'];
@@ -87,10 +87,10 @@
                         $alt_image = $file_upload_alt_img['name'];
                         move_uploaded_file($file_upload_alt_img['tmp_name'], $target_file . $alt_image);
                     
-                    } else {
-                        $alt_image = $_POST['old_alt_image'];
-                    }
-                }    
+                    } 
+                } else {
+                    $alt_image = $_POST['old_alt_image'];
+                }   
 
                 $new_blogs->n_blog_post_id = $_POST['blog_id'];
                 $new_blogs->n_category_id = $_POST['select_category'];
@@ -106,8 +106,7 @@
                 $new_blogs->f_post_status = $_POST['status'];
                 $new_blogs->d_date_created = date("Y-m-d",intval($_POST['date_created']));
                 $new_blogs->d_time_created = date("h:i:s",intval($_POST['time_created']));
-                // $new_blog->d_date_updated = date("Y-m-d",time());
-                // $new_blog->d_time_updated = date("h:i:s",time());
+
 
                 if ($new_blogs->update()) {
                     $flag = "Update successful !";
@@ -240,16 +239,16 @@
                                                     <td>
                                                         <button class="popup-button btn btn-success">Views</button>
                                                         <button class="btn btn-warning" onclick="location.href='edit_blog.php?id=<?php
-                                                                                                            echo $row['n_blog_post_id'] ?>'">
+                                                        echo $row['n_blog_post_id'] ?>'">
                                                             Edit
                                                         </button>
                                                         <button class="btn btn-danger" data-toggle="modal" data-target="#delete_blog<?php
-                                                                                                                echo $row['n_blog_post_id'] ?>">
+                                                        echo $row['n_blog_post_id'] ?>">
                                                             Delete
                                                         </button>
 
                                                         <div class="modal fade" id="delete_blog<?php
-                                                                                                echo $row['n_blog_post_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                            echo $row['n_blog_post_id'] ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                             <div class="modal-dialog">
                                                                 <form method="POST" action="">
                                                                     <div class="modal-content">
@@ -294,7 +293,7 @@
                 <!-- /.panel -->
             </div>
 
-            <?php include('footer.php') ?>
+            <?php include "footer.php" ?>
         </div>
         <!-- /. PAGE INNER  -->
     </div>

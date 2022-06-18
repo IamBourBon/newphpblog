@@ -132,21 +132,6 @@ class user{
         return false;
     }
 
-    public function last_id(){
-        $sql = "select MAX(n_user_id) from $this->table" ;
-        
-        $stmt = $this->conn->prepare($sql);
-        $stmt->execute();
-        
-        if($stmt->execute()){
-            
-            return $stmt; 
-        }
-        printf("Error : %s" , $stmt->error);
-        
-        return false;
-    }
-
     public function login(){
         $sql = "SELECT * FROM $this->table 
                 WHERE v_email =:email 
